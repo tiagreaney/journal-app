@@ -9,9 +9,16 @@
         <li class="nav-item">
             <%= link_to "Home", root_path, class: "nav-link"%>
         </li>
+        <% if Current.user %>
+        <li class="nav-item">
+          <%= link_to "Entries", entries_path , class: "nav-link"%>
+        </li>
+        <% end %>
+        <!-- Entry
         <li>
           <%= link_to "New Entry", new_entry_path, class: "nav-link"%>
         </li>
+        -->
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <% if Current.user %>

@@ -12,5 +12,11 @@ Rails.application.routes.draw do
   get "sign_in", to: "sessions#new"
   post "sign_in", to: "sessions#create"
 
+  get "entries", to: "entries#index"
+  post "entries", to: "entries#create"
+
+  get "new_entries", to: "entries#new"
+  post "new_entries", to: "entries#create"
+
   delete "logout", to: "sessions#destroy"
 end
