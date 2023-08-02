@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
         end
     end
 
-    before_action :require_login
 
     private
 

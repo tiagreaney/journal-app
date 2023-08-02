@@ -23,7 +23,11 @@ class EntriesController < ApplicationController
 
     private
     def entry_params
-        params.require(:entry).permit(:title, :content)
+        params.require(:entry).permit(:title, :content, :image)
+    end
+
+    def show
+      @entry = Entry.find(params[:id]) # Assuming you have a find method to retrieve the entry by its ID
     end
   
 

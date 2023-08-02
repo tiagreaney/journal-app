@@ -4,6 +4,10 @@
         <% @entries.each do |entry| %>
         <h5 class="card-title"> <%= entry.title %></h5>
         <p class="card-text"><%= entry.content %></p>
+        <% if entry.image.attached? %>
+            <%= image_tag entry.image %>
+        <% else %>
+        <% end %>
         <% end %>
     <% else %>
         <p>No entries found.</p>
