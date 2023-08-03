@@ -1,17 +1,28 @@
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <% if @entries.present? %>
-        <% @entries.each do |entry| %>
+<div class="row row-cols-3 g-3">
+
+
+<% if @entries.present? %>
+    <% @entries.each do |entry| %>
+
+<div class="col">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
         <h5 class="card-title"> <%= entry.title %></h5>
         <p class="card-text"><%= entry.content %></p>
         <% if entry.image.attached? %>
-            <%= image_tag entry.image %>
+            <%= image_tag entry.image, class: "img-fluid"  %>
         <% else %>
         <% end %>
-        <% end %>
-    <% else %>
-        <p>No entries found.</p>
+        </div>
+    </div>
+    </div>
+
     <% end %>
-  </div>
+
+<% else %>
+    <p>No entries found.</p>
+<% end %>
+
+
 </div>
 <a class="btn btn-primary" href="entries/new" role="button">New Entry</a>
