@@ -1,17 +1,22 @@
-<h1>Sign In</h1>
+<div class="container cover-container ">
+<h1 class="mb-4">Sign In</h1>
 
 <%= form_with url: sign_in_path, data: { turbo: false } do |form| %>
     <div class="mb-3">
         <%= form.label :email%>
-        <%= form.text_field :email, class: "form-control", placeholder: "tia@gmail.com "%>
+        <%= form.text_field :email, class: "form-control", placeholder: "example@gmail.com"%>
     </div>
 
     <div class="mb-3">
         <%= form.label :password%>
-        <%= form.password_field :password, class: "form-control", placeholder: "tiaiscool" %>
+        <%= form.password_field :password, class: "form-control", placeholder: "password" %>
     </div>
 
     <div class="mb-3">
-        <%= form.submit "Sign In", class: "btn btn-primary" %>
+        <p> Don't have an account? <a href="/sign_up">Sign up</a></p>
+    </div>
+    <div class="mb-3">
+        <%= form.submit "Sign In", class: "btn btn-lg btn-secondary" %>
     </div>
 <% end %>
+</div>

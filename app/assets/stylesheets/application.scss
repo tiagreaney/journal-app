@@ -14,3 +14,108 @@
  *= require_self
  */
  @import "bootstrap";
+ .footer-container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Set your preferred background color */
+    padding: 15px;
+  }
+  .narrow-form-container {
+    max-width: 400px; /* Set your preferred max-width here */
+    margin: 0 auto;   /* Center the form horizontally */
+  }
+  input[type="file"] {
+    display: none;
+  }
+  
+  .custom-file-upload {
+    /* Add your custom styling for the "Choose File" button here */
+    /* For example: */
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .custom-file-upload:hover {
+    /* Add your custom hover styling for the "Choose File" button here */
+    /* For example: */
+    background-color: #0056b3;
+  }
+
+  #page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+  .container {
+    flex: 1;
+  }
+  footer {
+    background-color: #f8f9fa;
+  }
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  .footer-text {
+    margin-bottom: 0;
+    padding-left: 7%;
+  }
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .footer-logo svg {
+    width: 40px;
+    height: 32px;
+  }
+  body {
+    background-color: #f0f2f5;
+  }
+
+  .cover-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 15px; 
+  }
+
+  .cover-heading {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    font-size: 1.25rem;
+    padding: 0.75rem 2rem;
+  }

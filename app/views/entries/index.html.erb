@@ -1,28 +1,32 @@
-<div class="row row-cols-3 g-3">
-
-
-<% if @entries.present? %>
-    <% @entries.each do |entry| %>
-
-<div class="col">
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-        <h5 class="card-title"> <%= entry.title %></h5>
-        <p class="card-text"><%= entry.content %></p>
-        <% if entry.image.attached? %>
-            <%= image_tag entry.image, class: "img-fluid"  %>
-        <% else %>
+<body>
+  <div class="container mt-4">
+    <div class="row row-cols-3 g-4">
+      <% if @entries.present? %>
+        <% @entries.each do |entry| %>
+          <div class="col">
+            <div class="card h-100">
+              <% if entry.image.attached? %>
+                <%= image_tag entry.image, class: "card-img-top img-fluid" %>
+              <% else %>
+                <div class="bg-secondary text-light text-center py-5">
+                </div>
+              <% end %>
+              <div class="card-body">
+                <h5 class="card-title"><%= entry.title %></h5>
+                <p class="card-text"><%= entry.content %></p>
+              </div>
+            </div>
+          </div>
         <% end %>
+      <% else %>
+        <div class="col text-center">
+          <p>No entries found.</p>
         </div>
+      <% end %>
     </div>
+
+    <div class="text-center mt-4">
+      <a class="btn btn-lg btn-secondary" href="entries/new" role="button">New Entry</a>
     </div>
-
-    <% end %>
-
-<% else %>
-    <p>No entries found.</p>
-<% end %>
-
-
-</div>
-<a class="btn btn-primary" href="entries/new" role="button">New Entry</a>
+  </div>
+</body>
